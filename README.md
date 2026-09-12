@@ -4,7 +4,7 @@ GameNight: Beat decision paralysis and find a game to play tonight!
 
 GameNight-iOS v0.0.1
 
-GameNight is a free to use, open-source App that helps you organize your backlog and discover what to play next. No tracking, no ads, no signup.
+GameNight is a free to use, open-source App that helps you organize your backlog and discover what to play next. No tracking, no ads, no signup.  
 Licensed under the copy-left GPLv3 license.
 
 Created by NachtRaveVL, August 28th, 2024.
