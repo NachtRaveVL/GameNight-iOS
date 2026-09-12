@@ -42,6 +42,8 @@ struct AppRootView: View {
         .sheet(item: $router.sheet, onDismiss: viewModel.sheetDidDismiss) { sheet in
             AppSheetView(sheet: sheet, viewModel: viewModel)
         }
+        .tint(AppTheme.accent(for: viewModel.theme.preferences.palette))
+        .preferredColorScheme(AppTheme.colorScheme(for: viewModel.theme.preferences.appearance))
     }
 
     private func tabStack<Content: View>(

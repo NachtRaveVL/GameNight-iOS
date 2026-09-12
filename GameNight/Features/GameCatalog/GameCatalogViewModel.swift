@@ -6,30 +6,33 @@ import Observation
 /// TODO(GN-021): Replace the page stub with feature state and use-case intents.
 @MainActor
 @Observable
-final class ConsoleCatalogViewModel {
+final class GameCatalogViewModel {
     let page: StubPage
-    let platformID: PlatformID?
+    let collection: CatalogCollection?
 
     private let router: AppRouter
     private let catalog: any CatalogRepository
+    private let eras: any ComputerEraRepository
 
     init(
         router: AppRouter,
         catalog: any CatalogRepository,
-        platformID: PlatformID? = nil
+        collection: CatalogCollection? = nil,
+        eras: any ComputerEraRepository
     ) {
         self.router = router
         self.catalog = catalog
-        self.platformID = platformID
+        self.collection = collection
+        self.eras = eras
         page = StubPage(
-            id: "page.consoleCatalog",
-            title: String(localized: "Console catalog"),
+            id: "page.gameCatalog",
+            title: String(localized: "Game collection"),
             systemImage: "square.grid.2x2",
-            summary: String(localized: "A catalog for the selected console. No console is selected in this preview."),
+            summary: String(localized: "Browse a console or curated computer era. Collection loading is still unfinished."),
             plannedWork: [
-                String(localized: "Console-specific cover grid"),
+                String(localized: "Cover grid for the selected platform or curated era"),
                 String(localized: "Search, genre filters, and explicit loading/error states"),
-                String(localized: "Load subsequent results without assuming API sort order")
+                String(localized: "Preserve filters and result order; era mappings must be curated")
             ],
             links: [
                 StubLink(

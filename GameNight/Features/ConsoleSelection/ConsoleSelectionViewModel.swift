@@ -25,9 +25,9 @@ final class ConsoleSelectionViewModel {
             id: "page.consoleSelection",
             title: String(localized: "Your consoles"),
             systemImage: "gamecontroller",
-            summary: String(localized: "Select several consoles, handhelds, or computer platforms."),
+            summary: String(localized: "Optionally choose consoles, handhelds, and computer eras you enjoy."),
             plannedWork: [
-                String(localized: "Manufacturer groups and platform identities"),
+                String(localized: "Console groups and computer eras with separate platform identities"),
                 String(localized: "Edit selections without deleting game history"),
                 String(localized: "Keep console access separate from game ownership")
             ],

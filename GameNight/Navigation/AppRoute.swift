@@ -2,12 +2,15 @@
 
 /// Nil identities are reserved for scaffold previews, never fabricated catalog data.
 enum AppRoute: Hashable, Sendable {
-    case consoleCatalog(PlatformID?)
-    case gameDetail(GameReleaseID?)
+    case gameCatalog(CatalogCollection?)
+    case gameDetail(GameBrowsingContext?)
     case recommendationTuning(GameID?)
+    case computerEras
+    case appearance
+    case shortlist
     case tonight
     case shelves
-    case resumeNote(GameReleaseID?)
+    case gameNote(GameReleaseID?)
     case gameNight
     case consoleSelection
     case tasteSetup

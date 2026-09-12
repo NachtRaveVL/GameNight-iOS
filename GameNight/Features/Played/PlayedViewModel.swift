@@ -22,18 +22,18 @@ final class PlayedViewModel {
             id: "page.played",
             title: String(localized: "Played"),
             systemImage: "checkmark.circle",
-            summary: String(localized: "Your playing and completed games stay on this device."),
+            summary: String(localized: "Games you have chosen to mark completed, with optional opinions."),
             plannedWork: [
-                String(localized: "Separate progress, interest, and opinion"),
+                String(localized: "Completion never implies liking or owning a game"),
                 String(localized: "Completion dates and optional personal notes"),
-                String(localized: "Independent progress for each console version")
+                String(localized: "Separate completion for each console version; no completion targets")
             ],
             links: [
                 StubLink(
                     id: "played.note",
-                    title: String(localized: "Where I left off"),
+                    title: String(localized: "Your note"),
                     systemImage: "bookmark",
-                    intent: .push(.resumeNote(nil))
+                    intent: .push(.gameNote(nil))
                 ),
                 StubLink(
                     id: "played.game",

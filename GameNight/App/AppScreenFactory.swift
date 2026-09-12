@@ -8,23 +8,25 @@ import SwiftUI
 struct AppScreenFactory {
     let dependencies: AppDependencies
     let router: AppRouter
+    let theme: ThemeState
 
     @ViewBuilder
     func makeRoute(_ route: AppRoute) -> some View {
         switch route {
-        case .consoleCatalog(let platformID):
-            ConsoleCatalogView(viewModel: ConsoleCatalogViewModel(
+        case .gameCatalog(let collection):
+            GameCatalogView(viewModel: GameCatalogViewModel(
                 router: router,
                 catalog: dependencies.catalog,
-                platformID: platformID
+                collection: collection,
+                eras: dependencies.computerEras
             ))
-        case .gameDetail(let releaseID):
+        case .gameDetail(let context):
             GameDetailView(viewModel: GameDetailViewModel(
                 router: router,
                 catalog: dependencies.catalog,
                 artwork: dependencies.artwork,
                 library: dependencies.library,
-                releaseID: releaseID
+                context: context
             ))
         case .recommendationTuning(let gameID):
             RecommendationTuningView(viewModel: RecommendationTuningViewModel(
@@ -33,6 +35,12 @@ struct AppScreenFactory {
                 library: dependencies.library,
                 gameID: gameID
             ))
+        case .computerEras:
+            ComputerErasView(viewModel: ComputerErasViewModel(router: router))
+        case .appearance:
+            AppearanceView(viewModel: AppearanceViewModel(router: router, theme: theme))
+        case .shortlist:
+            ShortlistView(viewModel: ShortlistViewModel(router: router, library: dependencies.library))
         case .tonight:
             TonightView(viewModel: TonightViewModel(
                 router: router,
@@ -41,8 +49,8 @@ struct AppScreenFactory {
             ))
         case .shelves:
             ShelvesView(viewModel: ShelvesViewModel(router: router, library: dependencies.library))
-        case .resumeNote(let releaseID):
-            ResumeNoteView(viewModel: ResumeNoteViewModel(
+        case .gameNote(let releaseID):
+            GameNoteView(viewModel: GameNoteViewModel(
                 router: router,
                 library: dependencies.library,
                 releaseID: releaseID

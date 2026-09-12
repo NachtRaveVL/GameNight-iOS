@@ -24,11 +24,17 @@ final class ProfileViewModel {
             systemImage: "person.crop.circle",
             summary: String(localized: "Your local setup. No GameNight account is required."),
             plannedWork: [
-                String(localized: "Console and taste preferences"),
+                String(localized: "Optional platform, era, and taste preferences"),
                 String(localized: "User-provided API key stored separately from exports"),
                 String(localized: "No adverts, analytics, or automatic diagnostic uploads")
             ],
             links: [
+                StubLink(
+                    id: "profile.appearance",
+                    title: String(localized: "Appearance"),
+                    systemImage: "paintpalette",
+                    intent: .push(.appearance)
+                ),
                 StubLink(
                     id: "profile.consoles",
                     title: String(localized: "Your consoles"),

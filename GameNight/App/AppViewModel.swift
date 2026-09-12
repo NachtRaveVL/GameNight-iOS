@@ -7,6 +7,7 @@ import Observation
 @Observable
 final class AppViewModel {
     let router: AppRouter
+    let theme: ThemeState
     let screens: AppScreenFactory
     let discover: DiscoverViewModel
     let explore: ExploreViewModel
@@ -14,10 +15,16 @@ final class AppViewModel {
     let played: PlayedViewModel
     let profile: ProfileViewModel
 
-    init(dependencies: AppDependencies, showOnboarding: Bool = true) {
+    init(
+        dependencies: AppDependencies,
+        showOnboarding: Bool = false,
+        themePreferences: ThemePreferences = ThemePreferences()
+    ) {
+        let theme = ThemeState(preferences: themePreferences)
+        self.theme = theme
         let router = AppRouter(showOnboarding: showOnboarding)
         self.router = router
-        screens = AppScreenFactory(dependencies: dependencies, router: router)
+        screens = AppScreenFactory(dependencies: dependencies, router: router, theme: theme)
         discover = DiscoverViewModel(
             router: router,
             catalog: dependencies.catalog,

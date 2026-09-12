@@ -11,12 +11,22 @@
         }
       }
     },
-    "A catalog for the selected console. No console is selected in this preview.": {
+    "A few possibilities from your Shortlist and Backlog": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A catalog for the selected console. No console is selected in this preview."
+            "value": "A few possibilities from your Shortlist and Backlog"
+          }
+        }
+      }
+    },
+    "A few suggestions from your Shortlist and Backlog.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A few suggestions from your Shortlist and Backlog."
           }
         }
       }
@@ -31,22 +41,72 @@
         }
       }
     },
-    "A private note to help you return to a game.": {
+    "A handful of possibilities that catch your interest.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A private note to help you return to a game."
+            "value": "A handful of possibilities that catch your interest."
           }
         }
       }
     },
-    "A separate reminder for a game already in your backlog": {
+    "A small selection with clear reasons, without creating an assignment": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A separate reminder for a game already in your backlog"
+            "value": "A small selection with clear reasons, without creating an assignment"
+          }
+        }
+      }
+    },
+    "Accessible contrast, text sizing, and reduced motion": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Accessible contrast, text sizing, and reduced motion"
+          }
+        }
+      }
+    },
+    "An unordered Shortlist within your Backlog": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An unordered Shortlist within your Backlog"
+          }
+        }
+      }
+    },
+    "An unordered subset of your Backlog; no ranks or schedules": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "An unordered subset of your Backlog; no ranks or schedules"
+          }
+        }
+      }
+    },
+    "Anything you want to remember? Entirely optional.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anything you want to remember? Entirely optional."
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
           }
         }
       }
@@ -91,12 +151,32 @@
         }
       }
     },
+    "Box art, previews, and possibilities. The overview is still a stub.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Box art, previews, and possibilities. The overview is still a stub."
+          }
+        }
+      }
+    },
     "Bring your own MobyGames API key. Entry is not implemented yet.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Bring your own MobyGames API key. Entry is not implemented yet."
+          }
+        }
+      }
+    },
+    "Browse a console or curated computer era. Collection loading is still unfinished.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Browse a console or curated computer era. Collection loading is still unfinished."
           }
         }
       }
@@ -111,22 +191,22 @@
         }
       }
     },
-    "Browse game catalogs by console.": {
+    "Browse consoles, computer eras, and game collections.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Browse game catalogs by console."
+            "value": "Browse consoles, computer eras, and game collections."
           }
         }
       }
     },
-    "Choose among three games already in your backlog.": {
+    "Browse the gaming environments you enjoy.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Choose among three games already in your backlog."
+            "value": "Browse the gaming environments you enjoy."
           }
         }
       }
@@ -171,6 +251,26 @@
         }
       }
     },
+    "Classic Macintosh": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Classic Macintosh"
+          }
+        }
+      }
+    },
+    "Clearly separate saved games from new discoveries; no check-ins": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clearly separate saved games from new discoveries; no check-ins"
+          }
+        }
+      }
+    },
     "Close": {
       "localizations": {
         "en": {
@@ -191,32 +291,32 @@
         }
       }
     },
-    "Console and taste preferences": {
+    "Completion never implies liking or owning a game": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Console and taste preferences"
+            "value": "Completion never implies liking or owning a game"
           }
         }
       }
     },
-    "Console catalog": {
+    "Computer eras": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Console catalog"
+            "value": "Computer eras"
           }
         }
       }
     },
-    "Console catalog stub": {
+    "Console groups and computer eras with separate platform identities": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Console catalog stub"
+            "value": "Console groups and computer eras with separate platform identities"
           }
         }
       }
@@ -241,16 +341,6 @@
         }
       }
     },
-    "Console-specific cover grid": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Console-specific cover grid"
-          }
-        }
-      }
-    },
     "Continue to app shell": {
       "localizations": {
         "en": {
@@ -261,12 +351,72 @@
         }
       }
     },
+    "Coordinated palettes across the app and its sheets": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coordinated palettes across the app and its sheets"
+          }
+        }
+      }
+    },
+    "Cover grid for the selected platform or curated era": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cover grid for the selected platform or curated era"
+          }
+        }
+      }
+    },
     "Create, rename, and remove shelves": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Create, rename, and remove shelves"
+          }
+        }
+      }
+    },
+    "Curated Windows, Mac, and Linux collections may overlap": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Curated Windows, Mac, and Linux collections may overlap"
+          }
+        }
+      }
+    },
+    "DOS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DOS"
+          }
+        }
+      }
+    },
+    "DOS and Windows 3.x remain distinct": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DOS and Windows 3.x remain distinct"
+          }
+        }
+      }
+    },
+    "Desktop Linux gaming": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desktop Linux gaming"
           }
         }
       }
@@ -301,6 +451,16 @@
         }
       }
     },
+    "Early Linux gaming": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Early Linux gaming"
+          }
+        }
+      }
+    },
     "Edit or remove preferences anytime": {
       "localizations": {
         "en": {
@@ -317,6 +477,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Edit selections without deleting game history"
+          }
+        }
+      }
+    },
+    "Era labels never imply operating-system compatibility": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Era labels never imply operating-system compatibility"
           }
         }
       }
@@ -381,12 +551,32 @@
         }
       }
     },
-    "Full box art at its original proportions with a blurred surround": {
+    "Find something appealing whenever you feel like playing.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Full box art at its original proportions with a blurred surround"
+            "value": "Find something appealing whenever you feel like playing."
+          }
+        }
+      }
+    },
+    "Follow your device appearance, or choose your own.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Follow your device appearance, or choose your own."
+          }
+        }
+      }
+    },
+    "Full box art by default; thumbnails select images or video in the hero": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full box art by default; thumbnails select images or video in the hero"
           }
         }
       }
@@ -397,6 +587,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "Game Night mode"
+          }
+        }
+      }
+    },
+    "Game collection": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Game collection"
+          }
+        }
+      }
+    },
+    "Game collection stub": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Game collection stub"
           }
         }
       }
@@ -421,12 +631,12 @@
         }
       }
     },
-    "Games you intend to play, organized by console.": {
+    "Games you have chosen to mark completed, with optional opinions.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Games you intend to play, organized by console."
+            "value": "Games you have chosen to mark completed, with optional opinions."
           }
         }
       }
@@ -441,22 +651,12 @@
         }
       }
     },
-    "Genre filters and a browsable cover grid": {
+    "Genres, series, and cover grids with browsing position preserved": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Genre filters and a browsable cover grid"
-          }
-        }
-      }
-    },
-    "Independent progress for each console version": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Independent progress for each console version"
+            "value": "Genres, series, and cover grids with browsing position preserved"
           }
         }
       }
@@ -511,12 +711,22 @@
         }
       }
     },
-    "Load subsequent results without assuming API sort order": {
+    "Mac OS X/macOS: Intel era": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Load subsequent results without assuming API sort order"
+            "value": "Mac OS X/macOS: Intel era"
+          }
+        }
+      }
+    },
+    "Mac OS X: PowerPC era": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac OS X: PowerPC era"
           }
         }
       }
@@ -527,16 +737,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Manual per-game, per-console note"
-          }
-        }
-      }
-    },
-    "Manufacturer groups and platform identities": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Manufacturer groups and platform identities"
           }
         }
       }
@@ -621,16 +821,6 @@
         }
       }
     },
-    "My consoles and All consoles browsing scopes": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "My consoles and All consoles browsing scopes"
-          }
-        }
-      }
-    },
     "No GameNight registration": {
       "localizations": {
         "en": {
@@ -647,6 +837,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "No adverts, analytics, or automatic diagnostic uploads"
+          }
+        }
+      }
+    },
+    "No check-ins, reminders, or expectations to finish": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No check-ins, reminders, or expectations to finish"
           }
         }
       }
@@ -691,16 +891,6 @@
         }
       }
     },
-    "Not now affects only the current session": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Not now affects only the current session"
-          }
-        }
-      }
-    },
     "Not now is temporary; Not interested is reversible": {
       "localizations": {
         "en": {
@@ -721,12 +911,62 @@
         }
       }
     },
+    "Open this optional walkthrough from Profile whenever you want": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open this optional walkthrough from Profile whenever you want"
+          }
+        }
+      }
+    },
+    "Optional completion with Undo; save completed games again": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional completion with Undo; save completed games again"
+          }
+        }
+      }
+    },
+    "Optional platform, era, and taste preferences": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional platform, era, and taste preferences"
+          }
+        }
+      }
+    },
     "Optional preferences for suggestions computed on this device.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Optional preferences for suggestions computed on this device."
+          }
+        }
+      }
+    },
+    "Optional regional cover preference; deliberate video playback when a source is available": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optional regional cover preference; deliberate video playback when a source is available"
+          }
+        }
+      }
+    },
+    "Optionally choose consoles, handhelds, and computer eras you enjoy.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Optionally choose consoles, handhelds, and computer eras you enjoy."
           }
         }
       }
@@ -747,16 +987,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Personal shelves"
-          }
-        }
-      }
-    },
-    "Personal suggestions for the consoles you play on.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Personal suggestions for the consoles you play on."
           }
         }
       }
@@ -801,12 +1031,42 @@
         }
       }
     },
+    "Possibilities to return to whenever you feel like it.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Possibilities to return to whenever you feel like it."
+          }
+        }
+      }
+    },
+    "Preserve filters and result order; era mappings must be curated": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preserve filters and result order; era mappings must be curated"
+          }
+        }
+      }
+    },
     "Profile": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Profile"
+          }
+        }
+      }
+    },
+    "Readable overview and related games before expandable facts and credits": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Readable overview and related games before expandable facts and credits"
           }
         }
       }
@@ -831,12 +1091,12 @@
         }
       }
     },
-    "Remember an optional regional cover preference": {
+    "Removing a game from Shortlist keeps it in Backlog": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Remember an optional regional cover preference"
+            "value": "Removing a game from Shortlist keeps it in Backlog"
           }
         }
       }
@@ -847,6 +1107,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Replace one candidate or request another set"
+          }
+        }
+      }
+    },
+    "Replacing a suggestion changes only this visit, never your preferences": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replacing a suggestion changes only this visit, never your preferences"
           }
         }
       }
@@ -871,12 +1141,12 @@
         }
       }
     },
-    "Search with a clearly visible console scope": {
+    "Search with visible My platforms and All platforms scope": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Search with a clearly visible console scope"
+            "value": "Search with visible My platforms and All platforms scope"
           }
         }
       }
@@ -901,32 +1171,12 @@
         }
       }
     },
-    "Select several consoles, handhelds, or computer platforms.": {
+    "Separate completion for each console version; no completion targets": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select several consoles, handhelds, or computer platforms."
-          }
-        }
-      }
-    },
-    "Separate artwork viewer and recommendations below the overview": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Separate artwork viewer and recommendations below the overview"
-          }
-        }
-      }
-    },
-    "Separate progress, interest, and opinion": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Separate progress, interest, and opinion"
+            "value": "Separate completion for each console version; no completion targets"
           }
         }
       }
@@ -941,12 +1191,22 @@
         }
       }
     },
-    "Show the note when resuming": {
+    "Shortlist": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Show the note when resuming"
+            "value": "Shortlist"
+          }
+        }
+      }
+    },
+    "Show your note on the game overview": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show your note on the game overview"
           }
         }
       }
@@ -961,12 +1221,12 @@
         }
       }
     },
-    "Start, pause, and complete with Undo": {
+    "Steam-era Linux": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Start, pause, and complete with Undo"
+            "value": "Steam-era Linux"
           }
         }
       }
@@ -991,12 +1251,12 @@
         }
       }
     },
-    "Synopsis, selected console, and explicit personal actions": {
+    "System, Light, and Dark appearance independent of palette": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Synopsis, selected console, and explicit personal actions"
+            "value": "System, Light, and Dark appearance independent of palette"
           }
         }
       }
@@ -1031,16 +1291,6 @@
         }
       }
     },
-    "The box-art-led overview. No game is selected in this preview.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "The box-art-led overview. No game is selected in this preview."
-          }
-        }
-      }
-    },
     "The connection to MobyGames could not be completed.": {
       "localizations": {
         "en": {
@@ -1071,32 +1321,12 @@
         }
       }
     },
-    "This welcome stub appears each launch until local settings are implemented": {
+    "Title, release selector, Backlog, Shortlist, and optional completion beneath the hero": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This welcome stub appears each launch until local settings are implemented"
-          }
-        }
-      }
-    },
-    "Three candidates with clear reasons": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Three candidates with clear reasons"
-          }
-        }
-      }
-    },
-    "Tonight shortlist": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Tonight shortlist"
+            "value": "Title, release selector, Backlog, Shortlist, and optional completion beneath the hero"
           }
         }
       }
@@ -1117,16 +1347,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tune suggestions"
-          }
-        }
-      }
-    },
-    "Up next queue and console filters": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Up next queue and console filters"
           }
         }
       }
@@ -1181,12 +1401,52 @@
         }
       }
     },
-    "Where I left off": {
+    "Windows 10/11": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Where I left off"
+            "value": "Windows 10/11"
+          }
+        }
+      }
+    },
+    "Windows 2000/XP/Vista": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows 2000/XP/Vista"
+          }
+        }
+      }
+    },
+    "Windows 3.x / 3.11": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows 3.x / 3.11"
+          }
+        }
+      }
+    },
+    "Windows 7/8": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows 7/8"
+          }
+        }
+      }
+    },
+    "Windows 95/98/Me": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Windows 95/98/Me"
           }
         }
       }
@@ -1221,12 +1481,12 @@
         }
       }
     },
-    "Your playing and completed games stay on this device.": {
+    "Your note": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Your playing and completed games stay on this device."
+            "value": "Your note"
           }
         }
       }
@@ -1237,6 +1497,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Zoom while preserving image proportions"
+          }
+        }
+      }
+    },
+    "macOS: Apple silicon era": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS: Apple silicon era"
           }
         }
       }

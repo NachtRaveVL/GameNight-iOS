@@ -22,16 +22,22 @@ final class BacklogViewModel {
             id: "page.backlog",
             title: String(localized: "Backlog"),
             systemImage: "list.bullet",
-            summary: String(localized: "Games you intend to play, organized by console."),
+            summary: String(localized: "Possibilities to return to whenever you feel like it."),
             plannedWork: [
-                String(localized: "Up next queue and console filters"),
-                String(localized: "Start, pause, and complete with Undo"),
+                String(localized: "An unordered Shortlist within your Backlog"),
+                String(localized: "Optional completion with Undo; save completed games again"),
                 String(localized: "Not now is temporary; Not interested is reversible")
             ],
             links: [
                 StubLink(
+                    id: "backlog.shortlist",
+                    title: String(localized: "Shortlist"),
+                    systemImage: "star",
+                    intent: .push(.shortlist)
+                ),
+                StubLink(
                     id: "backlog.tonight",
-                    title: String(localized: "Tonight shortlist"),
+                    title: String(localized: "Pick a game for tonight"),
                     systemImage: "moon.stars",
                     intent: .push(.tonight)
                 ),

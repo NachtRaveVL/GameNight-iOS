@@ -6,6 +6,11 @@ protocol CatalogRepository: Sendable {
     func games(matching query: CatalogQuery) async throws -> CatalogPage
 }
 
+/// Curated metadata owned by GameNight. Era membership is never inferred by the API client.
+protocol ComputerEraRepository: Sendable {
+    func assignments(in era: ComputerEra) async throws -> [ComputerEraAssignment]
+}
+
 protocol PlayerLibraryRepository: Sendable {
     func load() async throws -> LibrarySnapshot
     func save(_ snapshot: LibrarySnapshot) async throws
@@ -20,7 +25,8 @@ struct GameRecommendation: Equatable, Sendable {
     let explanation: String
 }
 
-/// Recommendations are computed on-device from explicit preferences.
+/// On-device suggestions use explicit preferences and honor title-wide exclusions.
+/// Backlog/Shortlist are possibilities, never ranked tasks. No session/visit history is accepted.
 protocol RecommendationRepository: Sendable {
     func suggestions(for library: LibrarySnapshot) async throws -> [GameRecommendation]
 }

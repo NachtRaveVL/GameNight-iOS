@@ -12,14 +12,14 @@ struct WorkInProgressView: View {
             VStack(alignment: .leading, spacing: AppTheme.Spacing.large) {
                 Label("Work in progress", systemImage: "hammer")
                     .font(.subheadline.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.textSecondary)
 
                 Label(page.title, systemImage: page.systemImage)
                     .font(.title.weight(.bold))
                     .accessibilityAddTraits(.isHeader)
 
                 Text(page.summary)
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(AppTheme.textSecondary)
 
                 VStack(alignment: .leading, spacing: AppTheme.Spacing.medium) {
                     Text("Planned for this screen")
@@ -57,7 +57,8 @@ struct WorkInProgressView: View {
             .frame(maxWidth: 680, alignment: .leading)
             .frame(maxWidth: .infinity)
         }
-        .background(Color(uiColor: .systemGroupedBackground))
+        .foregroundStyle(AppTheme.textPrimary)
+        .background(AppTheme.background)
         .navigationTitle(page.title)
         .navigationBarTitleDisplayMode(.inline)
         .accessibilityIdentifier(page.id)

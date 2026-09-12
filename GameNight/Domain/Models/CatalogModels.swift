@@ -15,13 +15,13 @@ struct CatalogGame: Identifiable, Equatable, Sendable {
 
 /// Explicit browsing scope; an empty console selection is not silently "all".
 enum CatalogScope: Equatable, Sendable {
-    case myConsoles([PlatformID])
-    case allConsoles
+    case selectedPlatforms([PlatformID])
+    case allPlatforms
 }
 
 struct CatalogQuery: Equatable, Sendable {
     var title = ""
-    var scope: CatalogScope = .myConsoles([])
+    var scope: CatalogScope = .selectedPlatforms([])
     var offset = 0
 }
 

@@ -6,7 +6,7 @@ import Observation
 /// TODO(GN-033): Replace the page stub with feature state and use-case intents.
 @MainActor
 @Observable
-final class ResumeNoteViewModel {
+final class GameNoteViewModel {
     let page: StubPage
     let releaseID: GameReleaseID?
 
@@ -22,13 +22,13 @@ final class ResumeNoteViewModel {
         self.library = library
         self.releaseID = releaseID
         page = StubPage(
-            id: "page.resumeNote",
-            title: String(localized: "Where I left off"),
+            id: "page.gameNote",
+            title: String(localized: "Your note"),
             systemImage: "bookmark",
-            summary: String(localized: "A private note to help you return to a game."),
+            summary: String(localized: "Anything you want to remember? Entirely optional."),
             plannedWork: [
                 String(localized: "Manual per-game, per-console note"),
-                String(localized: "Show the note when resuming"),
+                String(localized: "Show your note on the game overview"),
                 String(localized: "No gameplay monitoring")
             ],
             links: []

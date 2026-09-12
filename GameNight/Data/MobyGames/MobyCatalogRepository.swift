@@ -17,11 +17,11 @@ struct MobyCatalogRepository: CatalogRepository {
     func games(matching query: CatalogQuery) async throws -> CatalogPage {
         var filter = MobyGameFilter(title: query.title.isEmpty ? nil : query.title)
         switch query.scope {
-        case .myConsoles(let platforms):
+        case .selectedPlatforms(let platforms):
             // An empty personal selection must not trigger an unfiltered catalog request.
             guard !platforms.isEmpty else { return CatalogPage(games: [], nextOffset: nil) }
             filter.platformIDs = platforms
-        case .allConsoles:
+        case .allPlatforms:
             break
         }
         let page = MobyPage(offset: query.offset)

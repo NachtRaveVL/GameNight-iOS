@@ -2,10 +2,10 @@
 
 import SwiftUI
 
-struct ResumeNoteView: View {
-    @State private var viewModel: ResumeNoteViewModel
+struct ComputerErasView: View {
+    @State private var viewModel: ComputerErasViewModel
 
-    init(viewModel: ResumeNoteViewModel) {
+    init(viewModel: ComputerErasViewModel) {
         _viewModel = State(initialValue: viewModel)
     }
 

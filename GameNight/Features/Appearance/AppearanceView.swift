@@ -2,10 +2,10 @@
 
 import SwiftUI
 
-struct ConsoleCatalogView: View {
-    @State private var viewModel: ConsoleCatalogViewModel
+struct AppearanceView: View {
+    @State private var viewModel: AppearanceViewModel
 
-    init(viewModel: ConsoleCatalogViewModel) {
+    init(viewModel: AppearanceViewModel) {
         _viewModel = State(initialValue: viewModel)
     }
 

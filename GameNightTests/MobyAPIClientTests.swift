@@ -158,7 +158,7 @@ struct MobyAPIClientTests {
         let client = MobyAPIClient(credentials: TestCredentialStore(), transport: transport)
         let repository = MobyCatalogRepository(client: client)
         let page = try await repository.games(matching: CatalogQuery(
-            title: "Example", scope: .myConsoles([PlatformID(rawValue: 7)]), offset: 100
+            title: "Example", scope: .selectedPlatforms([PlatformID(rawValue: 7)]), offset: 100
         ))
         #expect(page.games.first?.id == GameID(rawValue: 42))
         #expect(page.games.first?.platformIDs == [PlatformID(rawValue: 7)])

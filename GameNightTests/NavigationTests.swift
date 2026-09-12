@@ -7,7 +7,8 @@ import Testing
 struct NavigationTests {
     @Test
     func switchingTabsPreservesIndependentHistories() {
-        let router = AppRouter(showOnboarding: false)
+        let router = AppRouter()
+        #expect(router.sheet == nil)
         router.perform(.push(.gameDetail(nil)))
         router.selectedTab = .backlog
         router.perform(.push(.shelves))
@@ -20,7 +21,7 @@ struct NavigationTests {
 
     @Test
     func modalNavigationDoesNotPushBehindTheSheet() {
-        let router = AppRouter()
+        let router = AppRouter(showOnboarding: true)
         router.perform(.push(.consoleSelection))
 
         #expect(router.sheet == .onboarding)
@@ -34,7 +35,7 @@ struct NavigationTests {
 
     @Test
     func interactiveDismissalClearsModalHistory() {
-        let router = AppRouter()
+        let router = AppRouter(showOnboarding: true)
         router.perform(.push(.tasteSetup))
         router.sheet = nil
         router.sheetDidDismiss()
@@ -52,7 +53,7 @@ struct NavigationTests {
             catalog: ScaffoldCatalogRepository(),
             artwork: ScaffoldArtworkRepository(),
             library: ScaffoldPlayerLibraryRepository(),
-            releaseID: release
+            context: GameBrowsingContext(releases: [release])
         )
         let link = try #require(model.page.links.first { $0.id == "detail.artwork" })
         model.handle(link.intent)
@@ -62,7 +63,7 @@ struct NavigationTests {
 
     @Test
     func welcomeContinueExposesTheShell() throws {
-        let router = AppRouter()
+        let router = AppRouter(showOnboarding: true)
         let model = OnboardingViewModel(router: router, library: ScaffoldPlayerLibraryRepository())
         let link = try #require(model.page.links.first { $0.id == "onboarding.continue" })
         model.handle(link.intent)

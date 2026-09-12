@@ -28,11 +28,11 @@ final class DiscoverViewModel {
             id: "page.discover",
             title: String(localized: "Discover"),
             systemImage: "sparkles",
-            summary: String(localized: "Personal suggestions for the consoles you play on."),
+            summary: String(localized: "Find something appealing whenever you feel like playing."),
             plannedWork: [
                 String(localized: "Recommendations explained through explicit preferences"),
-                String(localized: "My consoles and All consoles browsing scopes"),
-                String(localized: "A separate reminder for a game already in your backlog")
+                String(localized: "A few possibilities from your Shortlist and Backlog"),
+                String(localized: "Clearly separate saved games from new discoveries; no check-ins")
             ],
             links: [
                 StubLink(

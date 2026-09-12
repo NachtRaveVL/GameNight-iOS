@@ -23,13 +23,13 @@ final class TonightViewModel {
         self.recommendations = recommendations
         page = StubPage(
             id: "page.tonight",
-            title: String(localized: "Tonight shortlist"),
+            title: String(localized: "Pick a game for tonight"),
             systemImage: "moon.stars",
-            summary: String(localized: "Choose among three games already in your backlog."),
+            summary: String(localized: "A few suggestions from your Shortlist and Backlog."),
             plannedWork: [
-                String(localized: "Three candidates with clear reasons"),
+                String(localized: "A small selection with clear reasons, without creating an assignment"),
                 String(localized: "Replace one candidate or request another set"),
-                String(localized: "Not now affects only the current session")
+                String(localized: "Replacing a suggestion changes only this visit, never your preferences")
             ],
             links: []
         )

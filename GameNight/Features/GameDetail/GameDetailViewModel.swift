@@ -7,8 +7,18 @@ import Observation
 @MainActor
 @Observable
 final class GameDetailViewModel {
-    let page: StubPage
-    let releaseID: GameReleaseID?
+    enum HeroSelection: Equatable {
+        case boxArt
+        case image(String)
+        case video(String)
+    }
+
+    var page: StubPage { makePage() }
+    private(set) var context: GameBrowsingContext?
+    private(set) var heroSelection: HeroSelection = .boxArt
+    var releaseID: GameReleaseID? { context?.releaseID }
+    var hasPreviousGame: Bool { context?.hasPrevious == true }
+    var hasNextGame: Bool { context?.hasNext == true }
 
     private let router: AppRouter
     private let catalog: any CatalogRepository
@@ -20,23 +30,46 @@ final class GameDetailViewModel {
         catalog: any CatalogRepository,
         artwork: any ArtworkRepository,
         library: any PlayerLibraryRepository,
-        releaseID: GameReleaseID? = nil
+        context: GameBrowsingContext? = nil
     ) {
         self.router = router
         self.catalog = catalog
         self.artwork = artwork
         self.library = library
-        self.releaseID = releaseID
-        page = StubPage(
+        self.context = context
+    }
+
+    // Media IDs will come from the selected release's loaded previews (GN-022/GN-050).
+    func selectHero(_ selection: HeroSelection) {
+        guard context != nil else { return }
+        heroSelection = selection
+    }
+
+    func showNextGame() {
+        guard context?.moveNext() == true else { return }
+        heroSelection = .boxArt
+    }
+
+    func showPreviousGame() {
+        guard context?.movePrevious() == true else { return }
+        heroSelection = .boxArt
+    }
+
+    func handle(_ intent: NavigationIntent) {
+        router.perform(intent)
+    }
+
+    private func makePage() -> StubPage {
+        StubPage(
             id: "page.gameDetail",
             title: String(localized: "Game overview"),
             systemImage: "rectangle.portrait",
-            summary: String(localized: "The box-art-led overview. No game is selected in this preview."),
+            summary: String(localized: "Box art, previews, and possibilities. The overview is still a stub."),
             plannedWork: [
-                String(localized: "Full box art at its original proportions with a blurred surround"),
+                String(localized: "Full box art by default; thumbnails select images or video in the hero"),
                 String(localized: "Swipe between games in the originating list; preserve the edge Back gesture"),
-                String(localized: "Synopsis, selected console, and explicit personal actions"),
-                String(localized: "Separate artwork viewer and recommendations below the overview")
+                String(localized: "Title, release selector, Backlog, Shortlist, and optional completion beneath the hero"),
+                String(localized: "Readable overview and related games before expandable facts and credits")
             ],
             links: [
                 StubLink(
@@ -47,15 +80,11 @@ final class GameDetailViewModel {
                 ),
                 StubLink(
                     id: "detail.note",
-                    title: String(localized: "Where I left off"),
+                    title: String(localized: "Your note"),
                     systemImage: "bookmark",
-                    intent: .push(.resumeNote(releaseID))
+                    intent: .push(.gameNote(releaseID))
                 )
             ]
         )
-    }
-
-    func handle(_ intent: NavigationIntent) {
-        router.perform(intent)
     }
 }

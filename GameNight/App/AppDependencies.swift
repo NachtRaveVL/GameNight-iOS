@@ -7,6 +7,7 @@ struct AppDependencies: Sendable {
     let artwork: any ArtworkRepository
     let recommendations: any RecommendationRepository
     let credentials: any CredentialStore
+    let computerEras: any ComputerEraRepository
 
     static func scaffold() -> AppDependencies {
         AppDependencies(
@@ -14,7 +15,8 @@ struct AppDependencies: Sendable {
             library: ScaffoldPlayerLibraryRepository(),
             artwork: ScaffoldArtworkRepository(),
             recommendations: ScaffoldRecommendationRepository(),
-            credentials: ScaffoldCredentialStore()
+            credentials: ScaffoldCredentialStore(),
+            computerEras: ScaffoldComputerEraRepository()
         )
     }
 
@@ -27,7 +29,8 @@ struct AppDependencies: Sendable {
             library: ScaffoldPlayerLibraryRepository(),
             artwork: ScaffoldArtworkRepository(),
             recommendations: ScaffoldRecommendationRepository(),
-            credentials: credentials
+            credentials: credentials,
+            computerEras: ScaffoldComputerEraRepository()
         )
     }
 }

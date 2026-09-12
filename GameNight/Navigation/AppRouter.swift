@@ -22,7 +22,7 @@ final class AppRouter {
     private let played = TabNavigationState()
     private let profile = TabNavigationState()
 
-    init(showOnboarding: Bool = true) {
+    init(showOnboarding: Bool = false) {
         sheet = showOnboarding ? .onboarding : nil
     }
 

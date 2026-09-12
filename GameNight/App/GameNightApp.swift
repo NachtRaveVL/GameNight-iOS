@@ -14,7 +14,6 @@ struct GameNightApp: App {
     var body: some Scene {
         WindowGroup {
             AppRootView(viewModel: viewModel)
-                .tint(AppTheme.accent)
         }
     }
 }

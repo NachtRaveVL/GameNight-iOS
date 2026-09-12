@@ -6,6 +6,14 @@ enum ScaffoldCapability: String, Sendable {
     case artwork
     case recommendations
     case credentials
+    case computerEras
+}
+
+/// TODO(GN-024): Supply curated release mappings; absence must not masquerade as an empty era.
+struct ScaffoldComputerEraRepository: ComputerEraRepository {
+    func assignments(in era: ComputerEra) async throws -> [ComputerEraAssignment] {
+        throw ScaffoldError.notImplemented(.computerEras)
+    }
 }
 
 /// Unimplemented operations fail explicitly instead of pretending to save or load.

@@ -25,18 +25,24 @@ final class ExploreViewModel {
             id: "page.explore",
             title: String(localized: "Explore"),
             systemImage: "magnifyingglass",
-            summary: String(localized: "Browse game catalogs by console."),
+            summary: String(localized: "Browse consoles, computer eras, and game collections."),
             plannedWork: [
                 String(localized: "Console tiles grouped by manufacturer"),
-                String(localized: "Search with a clearly visible console scope"),
-                String(localized: "Genre filters and a browsable cover grid")
+                String(localized: "Search with visible My platforms and All platforms scope"),
+                String(localized: "Genres, series, and cover grids with browsing position preserved")
             ],
             links: [
                 StubLink(
+                    id: "explore.eras",
+                    title: String(localized: "Computer eras"),
+                    systemImage: "desktopcomputer",
+                    intent: .push(.computerEras)
+                ),
+                StubLink(
                     id: "explore.catalog",
-                    title: String(localized: "Console catalog stub"),
+                    title: String(localized: "Game collection stub"),
                     systemImage: "gamecontroller",
-                    intent: .push(.consoleCatalog(nil))
+                    intent: .push(.gameCatalog(nil))
                 ),
                 StubLink(
                     id: "explore.consoles",

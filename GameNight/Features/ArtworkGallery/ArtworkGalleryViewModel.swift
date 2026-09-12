@@ -29,7 +29,7 @@ final class ArtworkGalleryViewModel {
             plannedWork: [
                 String(localized: "Swipe between front/back covers, media scans, and screenshots"),
                 String(localized: "Zoom while preserving image proportions"),
-                String(localized: "Remember an optional regional cover preference")
+                String(localized: "Optional regional cover preference; deliberate video playback when a source is available")
             ],
             links: []
         )

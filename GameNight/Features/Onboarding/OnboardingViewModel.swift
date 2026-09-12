@@ -26,7 +26,7 @@ final class OnboardingViewModel {
             plannedWork: [
                 String(localized: "No GameNight registration"),
                 String(localized: "Skippable console and taste setup"),
-                String(localized: "This welcome stub appears each launch until local settings are implemented")
+                String(localized: "Open this optional walkthrough from Profile whenever you want")
             ],
             links: [
                 StubLink(
