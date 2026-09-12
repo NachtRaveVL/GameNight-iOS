@@ -1,6 +1,16 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "A MobyGames API key is required.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A MobyGames API key is required."
+          }
+        }
+      }
+    },
     "A catalog for the selected console. No console is selected in this preview.": {
       "localizations": {
         "en": {
@@ -551,12 +561,52 @@
         }
       }
     },
+    "MobyGames could not complete the request.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobyGames could not complete the request."
+          }
+        }
+      }
+    },
+    "MobyGames did not accept the API key.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobyGames did not accept the API key."
+          }
+        }
+      }
+    },
+    "MobyGames is limiting requests. Please try again later.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobyGames is limiting requests. Please try again later."
+          }
+        }
+      }
+    },
     "MobyGames plus sources with suitable reuse permissions": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "MobyGames plus sources with suitable reuse permissions"
+          }
+        }
+      }
+    },
+    "MobyGames returned an unexpected response.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobyGames returned an unexpected response."
           }
         }
       }
@@ -841,6 +891,16 @@
         }
       }
     },
+    "Secure API-key storage is not available yet.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Secure API-key storage is not available yet."
+          }
+        }
+      }
+    },
     "Select several consoles, handhelds, or computer platforms.": {
       "localizations": {
         "en": {
@@ -961,6 +1021,16 @@
         }
       }
     },
+    "The MobyGames request contains an invalid parameter.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The MobyGames request contains an invalid parameter."
+          }
+        }
+      }
+    },
     "The box-art-led overview. No game is selected in this preview.": {
       "localizations": {
         "en": {
@@ -971,12 +1041,32 @@
         }
       }
     },
+    "The connection to MobyGames could not be completed.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The connection to MobyGames could not be completed."
+          }
+        }
+      }
+    },
     "The provider receives the requests needed to retrieve its catalog": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "The provider receives the requests needed to retrieve its catalog"
+          }
+        }
+      }
+    },
+    "The requested MobyGames entry was not found.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The requested MobyGames entry was not found."
           }
         }
       }

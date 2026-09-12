@@ -17,4 +17,17 @@ struct AppDependencies: Sendable {
             credentials: ScaffoldCredentialStore()
         )
     }
+
+    /// Opt-in wiring for future feature work. Construction does not send requests.
+    /// Supply the real Keychain-backed CredentialStore when its implementation is ready.
+    static func mobyGames(credentials: any CredentialStore) -> AppDependencies {
+        let client = MobyAPIClient(credentials: credentials)
+        return AppDependencies(
+            catalog: MobyCatalogRepository(client: client),
+            library: ScaffoldPlayerLibraryRepository(),
+            artwork: ScaffoldArtworkRepository(),
+            recommendations: ScaffoldRecommendationRepository(),
+            credentials: credentials
+        )
+    }
 }
