@@ -1,0 +1,3 @@
+// Copy to Local.xcconfig (git-ignored) and replace with your signing team ID.
+// Never put API keys here: xcconfig values can end up in built artifacts.
+DEVELOPMENT_TEAM = YOUR_TEAM_ID
