@@ -36,6 +36,10 @@ struct ScaffoldPlayerLibraryRepository: PlayerLibraryRepository {
         throw ScaffoldError.notImplemented(.localStorage)
     }
 
+    func update(_ mutation: @Sendable (inout LibrarySnapshot) throws -> Void) async throws -> LibrarySnapshot {
+        throw ScaffoldError.notImplemented(.localStorage)
+    }
+
     func save(_ snapshot: LibrarySnapshot) async throws {
         throw ScaffoldError.notImplemented(.localStorage)
     }
@@ -64,5 +68,11 @@ struct ScaffoldCredentialStore: CredentialStore {
 
     func deleteMobyGamesAPIKey() async throws {
         throw ScaffoldError.notImplemented(.credentials)
+    }
+}
+
+struct ScaffoldConnectionChecker: MobyConnectionChecking {
+    func checkConnection() async throws {
+        throw ScaffoldError.notImplemented(.catalog)
     }
 }

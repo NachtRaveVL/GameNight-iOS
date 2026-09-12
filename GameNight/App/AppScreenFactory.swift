@@ -74,7 +74,9 @@ struct AppScreenFactory {
                 library: dependencies.library
             ))
         case .apiKey:
-            APIKeyView(viewModel: APIKeyViewModel(router: router, credentials: dependencies.credentials))
+            APIKeyView(viewModel: APIKeyViewModel(
+                credentials: dependencies.credentials, connection: dependencies.connection
+            ))
         case .artworkSources:
             ArtworkSourcesView(viewModel: ArtworkSourcesViewModel(router: router, artwork: dependencies.artwork))
         case .dataTransfer:

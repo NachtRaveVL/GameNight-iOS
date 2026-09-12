@@ -14,6 +14,8 @@ protocol ComputerEraRepository: Sendable {
 protocol PlayerLibraryRepository: Sendable {
     func load() async throws -> LibrarySnapshot
     func save(_ snapshot: LibrarySnapshot) async throws
+    @discardableResult
+    func update(_ mutation: @Sendable (inout LibrarySnapshot) throws -> Void) async throws -> LibrarySnapshot
 }
 
 protocol ArtworkRepository: Sendable {
@@ -36,4 +38,9 @@ protocol CredentialStore: Sendable {
     func mobyGamesAPIKey() async throws -> String?
     func setMobyGamesAPIKey(_ key: String) async throws
     func deleteMobyGamesAPIKey() async throws
+}
+
+/// Only an explicit user action should trigger this network operation.
+protocol MobyConnectionChecking: Sendable {
+    func checkConnection() async throws
 }

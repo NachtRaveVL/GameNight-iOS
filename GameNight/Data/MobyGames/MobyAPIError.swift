@@ -31,7 +31,7 @@ extension MobyAPIError: LocalizedError {
         case .missingAPIKey:
             String(localized: "A MobyGames API key is required.")
         case .credentialStoreUnavailable:
-            String(localized: "Secure API-key storage is not available yet.")
+            String(localized: "Secure API-key storage could not be accessed.")
         case .invalidRequest:
             String(localized: "The MobyGames request contains an invalid parameter.")
         case .unauthorized:

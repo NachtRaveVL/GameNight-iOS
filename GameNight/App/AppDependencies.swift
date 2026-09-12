@@ -8,6 +8,7 @@ struct AppDependencies: Sendable {
     let recommendations: any RecommendationRepository
     let credentials: any CredentialStore
     let computerEras: any ComputerEraRepository
+    let connection: any MobyConnectionChecking
 
     static func scaffold() -> AppDependencies {
         AppDependencies(
@@ -16,21 +17,31 @@ struct AppDependencies: Sendable {
             artwork: ScaffoldArtworkRepository(),
             recommendations: ScaffoldRecommendationRepository(),
             credentials: ScaffoldCredentialStore(),
-            computerEras: ScaffoldComputerEraRepository()
+            computerEras: ScaffoldComputerEraRepository(),
+            connection: ScaffoldConnectionChecker()
         )
     }
 
-    /// Opt-in wiring for future feature work. Construction does not send requests.
-    /// Supply the real Keychain-backed CredentialStore when its implementation is ready.
-    static func mobyGames(credentials: any CredentialStore) -> AppDependencies {
+    #if canImport(Security)
+    /// Construction performs no disk/Keychain access or network requests.
+    static func live() -> AppDependencies {
+        mobyGames(credentials: KeychainCredentialStore(), library: FilePlayerLibraryRepository())
+    }
+    #endif
+
+    static func mobyGames(
+        credentials: any CredentialStore,
+        library: any PlayerLibraryRepository = ScaffoldPlayerLibraryRepository()
+    ) -> AppDependencies {
         let client = MobyAPIClient(credentials: credentials)
         return AppDependencies(
             catalog: MobyCatalogRepository(client: client),
-            library: ScaffoldPlayerLibraryRepository(),
+            library: library,
             artwork: ScaffoldArtworkRepository(),
             recommendations: ScaffoldRecommendationRepository(),
             credentials: credentials,
-            computerEras: ScaffoldComputerEraRepository()
+            computerEras: ScaffoldComputerEraRepository(),
+            connection: MobyConnectionChecker(client: client)
         )
     }
 }

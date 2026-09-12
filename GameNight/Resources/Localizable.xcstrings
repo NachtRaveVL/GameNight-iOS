@@ -11,6 +11,16 @@
         }
       }
     },
+    "A connection check sends a request to MobyGames. Your Backlog, Shortlist, and notes are not sent.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A connection check sends a request to MobyGames. Your Backlog, Shortlist, and notes are not sent."
+          }
+        }
+      }
+    },
     "A few possibilities from your Shortlist and Backlog": {
       "localizations": {
         "en": {
@@ -57,6 +67,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "A small selection with clear reasons, without creating an assignment"
+          }
+        }
+      }
+    },
+    "API key removed. Your library is unchanged.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API key removed. Your library is unchanged."
+          }
+        }
+      }
+    },
+    "API key saved on this device": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API key saved on this device"
+          }
+        }
+      }
+    },
+    "API key saved. Connection has not been checked.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "API key saved. Connection has not been checked."
           }
         }
       }
@@ -161,16 +201,6 @@
         }
       }
     },
-    "Bring your own MobyGames API key. Entry is not implemented yet.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Bring your own MobyGames API key. Entry is not implemented yet."
-          }
-        }
-      }
-    },
     "Browse a console or curated computer era. Collection loading is still unfinished.": {
       "localizations": {
         "en": {
@@ -207,6 +237,36 @@
           "stringUnit": {
             "state": "translated",
             "value": "Browse the gaming environments you enjoy."
+          }
+        }
+      }
+    },
+    "Cancel check": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel check"
+          }
+        }
+      }
+    },
+    "Check connection": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check connection"
+          }
+        }
+      }
+    },
+    "Checking connection\u2026": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking connection\u2026"
           }
         }
       }
@@ -307,6 +367,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Computer eras"
+          }
+        }
+      }
+    },
+    "Connected to MobyGames.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Connected to MobyGames."
           }
         }
       }
@@ -477,6 +547,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Edit selections without deleting game history"
+          }
+        }
+      }
+    },
+    "Enter a valid API key without line breaks or control characters.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter a valid API key without line breaks or control characters."
           }
         }
       }
@@ -711,6 +791,16 @@
         }
       }
     },
+    "Key status unavailable": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Key status unavailable"
+          }
+        }
+      }
+    },
     "Mac OS X/macOS: Intel era": {
       "localizations": {
         "en": {
@@ -747,6 +837,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Match game, console, region, and edition"
+          }
+        }
+      }
+    },
+    "MobyGames API key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "MobyGames API key"
           }
         }
       }
@@ -817,6 +917,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "More like this, but\u2026"
+          }
+        }
+      }
+    },
+    "No API key saved": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No API key saved"
           }
         }
       }
@@ -1071,6 +1181,16 @@
         }
       }
     },
+    "Reading key status\u2026": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading key status\u2026"
+          }
+        }
+      }
+    },
     "Recommendations explain both similarities and differences": {
       "localizations": {
         "en": {
@@ -1091,12 +1211,62 @@
         }
       }
     },
+    "Remove API key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove API key"
+          }
+        }
+      }
+    },
+    "Remove key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove key"
+          }
+        }
+      }
+    },
+    "Remove the saved API key?": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove the saved API key?"
+          }
+        }
+      }
+    },
     "Removing a game from Shortlist keeps it in Backlog": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Removing a game from Shortlist keeps it in Backlog"
+          }
+        }
+      }
+    },
+    "Removing key\u2026": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Removing key\u2026"
+          }
+        }
+      }
+    },
+    "Replace key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Replace key"
           }
         }
       }
@@ -1131,12 +1301,52 @@
         }
       }
     },
+    "Retry reading key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Retry reading key"
+          }
+        }
+      }
+    },
     "Review games you have excluded from suggestions.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Review games you have excluded from suggestions."
+          }
+        }
+      }
+    },
+    "Save key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save key"
+          }
+        }
+      }
+    },
+    "Save your key before checking the connection.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save your key before checking the connection."
+          }
+        }
+      }
+    },
+    "Saving key\u2026": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saving key\u2026"
           }
         }
       }
@@ -1161,12 +1371,22 @@
         }
       }
     },
-    "Secure API-key storage is not available yet.": {
+    "Secure API-key storage could not be accessed.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Secure API-key storage is not available yet."
+            "value": "Secure API-key storage could not be accessed."
+          }
+        }
+      }
+    },
+    "Secure API-key storage is unavailable. Please try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Secure API-key storage is unavailable. Please try again."
           }
         }
       }
@@ -1227,6 +1447,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Steam-era Linux"
+          }
+        }
+      }
+    },
+    "Stored in this device's Keychain. It is not synced through iCloud Keychain or included in library exports.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stored in this device's Keychain. It is not synced through iCloud Keychain or included in library exports."
           }
         }
       }
@@ -1301,6 +1531,26 @@
         }
       }
     },
+    "The library exceeds the supported file size. Its existing contents have been preserved.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The library exceeds the supported file size. Its existing contents have been preserved."
+          }
+        }
+      }
+    },
+    "The operation could not be completed. Please try again.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The operation could not be completed. Please try again."
+          }
+        }
+      }
+    },
     "The provider receives the requests needed to retrieve its catalog": {
       "localizations": {
         "en": {
@@ -1317,6 +1567,26 @@
           "stringUnit": {
             "state": "translated",
             "value": "The requested MobyGames entry was not found."
+          }
+        }
+      }
+    },
+    "The saved API key could not be read. You can replace it with a new key.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The saved API key could not be read. You can replace it with a new key."
+          }
+        }
+      }
+    },
+    "This library uses an unsupported format. Its contents have been preserved.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This library uses an unsupported format. Its contents have been preserved."
           }
         }
       }
@@ -1347,6 +1617,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Tune suggestions"
+          }
+        }
+      }
+    },
+    "Unlock your device to access the saved API key.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unlock your device to access the saved API key."
           }
         }
       }
@@ -1461,12 +1741,42 @@
         }
       }
     },
+    "Your API key": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your API key"
+          }
+        }
+      }
+    },
     "Your consoles": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
             "value": "Your consoles"
+          }
+        }
+      }
+    },
+    "Your library could not be accessed. Please try again when the device is unlocked.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your library could not be accessed. Please try again when the device is unlocked."
+          }
+        }
+      }
+    },
+    "Your library could not be read safely. Its existing contents have been preserved.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your library could not be read safely. Its existing contents have been preserved."
           }
         }
       }
@@ -1487,6 +1797,16 @@
           "stringUnit": {
             "state": "translated",
             "value": "Your note"
+          }
+        }
+      }
+    },
+    "Your saved games and preferences will remain on this device.": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your saved games and preferences will remain on this device."
           }
         }
       }

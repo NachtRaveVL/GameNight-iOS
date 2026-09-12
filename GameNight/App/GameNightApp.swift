@@ -8,7 +8,7 @@ struct GameNightApp: App {
     @State private var viewModel: AppViewModel
 
     init() {
-        _viewModel = State(initialValue: AppViewModel(dependencies: .scaffold()))
+        _viewModel = State(initialValue: AppViewModel(dependencies: .live()))
     }
 
     var body: some Scene {

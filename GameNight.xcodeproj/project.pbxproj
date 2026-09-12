@@ -66,6 +66,8 @@
 			"children" = (
 				"19EC426EB83FB0323CD87609",
 				"0FE83C07B00BF8825D0959F6",
+				"B63CE2CE379133DF9064813C",
+				"EFB57834154B196B9DE36134",
 			);
 			"path" = "Data";
 			"sourceTree" = "<group>";
@@ -97,6 +99,8 @@
 				"1CEC58F2B46D917A347B0948",
 				"7149C00920D1103B3AFF484E",
 				"26F51353902C1804E43FFF2B",
+				"A259B358AFB21699F280876C",
+				"C778EBB78561C8262BF5037D",
 			);
 			"path" = "Models";
 			"sourceTree" = "<group>";
@@ -690,6 +694,9 @@
 				"0730B0B622B0C9650B79ACFB",
 				"6DD6F2A2F5F3C26CD76183CE",
 				"A1A9030733FF10BEE756B128",
+				"7C4D926CA3C621D4DCD986B4",
+				"756F1206EF36C0F843897568",
+				"7BBF235440AC378A5F1E207C",
 			);
 			"path" = "GameNightTests";
 			"sourceTree" = "<group>";
@@ -1043,6 +1050,12 @@
 				"21D26045BC8D2134A3E12B16",
 				"5923896C966E0FA2AB8D4855",
 				"604F28EE74CA784C0EBEA6A8",
+				"02E594B540E00627D21E5541",
+				"921DD09AB3567109AE712448",
+				"143282FEF9A3E0DF8F0E9D5E",
+				"60D74D10AF3EC46746B5AD2E",
+				"6E79C466585C0C8FCC34D4B8",
+				"CF66B18438FC35AD24F87634",
 			);
 			"runOnlyForDeploymentPostprocessing" = "0";
 		};
@@ -1161,6 +1174,9 @@
 				"0112F3AC5BA742F350E9BCD5",
 				"B937397652CC42F5D4FBC40E",
 				"E8B39CFDDD31FD4E64A6C3C7",
+				"FAF67C47FAD81941BD76DD81",
+				"9E8733A61FAABFD4A92F1A41",
+				"F3CC1DC461BAFD1EB9092946",
 			);
 			"runOnlyForDeploymentPostprocessing" = "0";
 		};
@@ -1426,6 +1442,7 @@
 				"A206581EF1638D0C99CC2CCA",
 				"851621AC978ACB5ACC75C0CB",
 				"55C9B92541145B5E9CD27C5A",
+				"EA1FBCE26F469430B787184E",
 			);
 			"path" = "MobyGames";
 			"sourceTree" = "<group>";
@@ -1785,6 +1802,113 @@
 		"E8B39CFDDD31FD4E64A6C3C7" = {
 			"isa" = "PBXBuildFile";
 			"fileRef" = "A1A9030733FF10BEE756B128";
+		};
+		"B63CE2CE379133DF9064813C" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"CF02BB569C6229A48BBDE826",
+			);
+			"path" = "Credentials";
+			"sourceTree" = "<group>";
+		};
+		"CF02BB569C6229A48BBDE826" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "KeychainCredentialStore.swift";
+			"sourceTree" = "<group>";
+		};
+		"02E594B540E00627D21E5541" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "CF02BB569C6229A48BBDE826";
+		};
+		"EA1FBCE26F469430B787184E" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "MobyConnectionChecker.swift";
+			"sourceTree" = "<group>";
+		};
+		"921DD09AB3567109AE712448" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "EA1FBCE26F469430B787184E";
+		};
+		"EFB57834154B196B9DE36134" = {
+			"isa" = "PBXGroup";
+			"children" = (
+				"27CE3298FD75F9D50C9A80AE",
+				"C312B414727FA2121155F474",
+			);
+			"path" = "Storage";
+			"sourceTree" = "<group>";
+		};
+		"27CE3298FD75F9D50C9A80AE" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "FilePlayerLibraryRepository.swift";
+			"sourceTree" = "<group>";
+		};
+		"143282FEF9A3E0DF8F0E9D5E" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "27CE3298FD75F9D50C9A80AE";
+		};
+		"C312B414727FA2121155F474" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "LibrarySnapshot+Validation.swift";
+			"sourceTree" = "<group>";
+		};
+		"60D74D10AF3EC46746B5AD2E" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C312B414727FA2121155F474";
+		};
+		"A259B358AFB21699F280876C" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "StorageErrors.swift";
+			"sourceTree" = "<group>";
+		};
+		"6E79C466585C0C8FCC34D4B8" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "A259B358AFB21699F280876C";
+		};
+		"7C4D926CA3C621D4DCD986B4" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ConnectionFlowTests.swift";
+			"sourceTree" = "<group>";
+		};
+		"FAF67C47FAD81941BD76DD81" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7C4D926CA3C621D4DCD986B4";
+		};
+		"756F1206EF36C0F843897568" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "KeychainCredentialStoreTests.swift";
+			"sourceTree" = "<group>";
+		};
+		"9E8733A61FAABFD4A92F1A41" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "756F1206EF36C0F843897568";
+		};
+		"7BBF235440AC378A5F1E207C" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "LocalStorageTests.swift";
+			"sourceTree" = "<group>";
+		};
+		"F3CC1DC461BAFD1EB9092946" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "7BBF235440AC378A5F1E207C";
+		};
+		"C778EBB78561C8262BF5037D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "MobyAPIKey.swift";
+			"sourceTree" = "<group>";
+		};
+		"CF66B18438FC35AD24F87634" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "C778EBB78561C8262BF5037D";
 		};
 	};
 	"rootObject" = "244210E48437B6556980A702";
