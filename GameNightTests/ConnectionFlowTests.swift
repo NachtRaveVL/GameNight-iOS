@@ -67,18 +67,18 @@ struct ConnectionFlowTests {
         let checker = ConnectionProbe()
         let model = APIKeyViewModel(credentials: store, connection: checker)
         model.activate()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(model.storedKeyState == .stored && model.draftKey.isEmpty)
         #expect(await checker.calls == 0)
         model.draftKey = "  new+synthetic/= \n"
         model.requestSave()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(try await store.mobyGamesAPIKey() == "new+synthetic/=")
         #expect(model.draftKey.isEmpty && !model.connectionVerified)
         #expect(await checker.calls == 0)
         #expect(await store.writes == 1)
         model.requestCheck()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(model.connectionVerified && !model.isBusy)
         #expect(await checker.calls == 1)
     }
@@ -88,10 +88,10 @@ struct ConnectionFlowTests {
         let checker = ConnectionProbe()
         let model = APIKeyViewModel(credentials: ConnectionCredentials(key: "saved"), connection: checker)
         model.activate()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         model.draftKey = "different"
         model.requestCheck()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(await checker.calls == 0)
         #expect(!model.connectionVerified)
     }
@@ -102,7 +102,7 @@ struct ConnectionFlowTests {
         let model = APIKeyViewModel(credentials: store, connection: ConnectionProbe())
         model.draftKey = "replacement"
         model.requestSave()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(model.feedback?.isError == true)
         #expect(await store.key == "original")
         #expect(await store.writes == 0)
@@ -115,9 +115,9 @@ struct ConnectionFlowTests {
         let checker = ConnectionProbe()
         let model = APIKeyViewModel(credentials: store, connection: checker)
         model.activate()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         model.requestRemoval()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(try await store.mobyGamesAPIKey() == nil)
         #expect(model.storedKeyState == .missing && !model.connectionVerified)
         #expect(await checker.calls == 0)
@@ -129,9 +129,9 @@ struct ConnectionFlowTests {
         let checker = ConnectionProbe(failure: .unauthorized)
         let model = APIKeyViewModel(credentials: store, connection: checker)
         model.activate()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         model.requestCheck()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         #expect(model.feedback?.isError == true && model.canCheck)
         #expect(try await store.mobyGamesAPIKey() == "synthetic")
         #expect(!model.connectionVerified)
@@ -142,9 +142,9 @@ struct ConnectionFlowTests {
         let checker = SuspendedConnectionProbe()
         let model = APIKeyViewModel(credentials: ConnectionCredentials(key: "synthetic"), connection: checker)
         model.activate()
-        await model.executePendingOperation()
+        await model.executePendingOperation(id: model.operationID)
         model.requestCheck()
-        let operation = Task { await model.executePendingOperation() }
+        let operation = Task { await model.executePendingOperation(id: model.operationID) }
         await checker.waitUntilStarted()
         model.cancelCheck()
         model.draftKey = "unsaved-secret"
@@ -153,6 +153,62 @@ struct ConnectionFlowTests {
         await operation.value
         #expect(!model.connectionVerified && model.feedback == nil && model.draftKey.isEmpty)
         #expect(model.storedKeyState == .unknown && !model.isBusy)
+    }
+
+    @Test
+    func cancelledScheduledTaskDoesNotConsumePendingLoad() async {
+        let model = APIKeyViewModel(credentials: ConnectionCredentials(key: "synthetic"), connection: ConnectionProbe())
+        model.activate()
+        let staleTask = Task {
+            withUnsafeCurrentTask { $0?.cancel() }
+            await model.executePendingOperation(id: model.operationID)
+        }
+        await staleTask.value
+        #expect(model.operation == .load)
+        await model.executePendingOperation(id: model.operationID)
+        #expect(model.storedKeyState == .stored)
+    }
+
+    @Test
+    func rapidCancelAndRetryHasANewTaskIdentity() async {
+        let checker = ConnectionProbe()
+        let model = APIKeyViewModel(credentials: ConnectionCredentials(key: "synthetic"), connection: checker)
+        model.activate()
+        await model.executePendingOperation(id: model.operationID)
+        model.requestCheck()
+        let cancelledID = model.operationID
+        // No suspension: SwiftUI may observe only the final .check operation kind.
+        model.cancelCheck()
+        model.requestCheck()
+        let retryID = model.operationID
+        #expect(retryID != cancelledID)
+        await model.executePendingOperation(id: cancelledID)
+        #expect(model.operation == .check)
+        #expect(await checker.calls == 0)
+        await model.executePendingOperation(id: retryID)
+        #expect(model.connectionVerified && !model.isBusy)
+        #expect(await checker.calls == 1)
+    }
+
+    @Test
+    func lateCompletionDoesNotClearReplacementRequest() async {
+        let checker = SuspendedConnectionProbe()
+        let model = APIKeyViewModel(credentials: ConnectionCredentials(key: "synthetic"), connection: checker)
+        model.activate()
+        await model.executePendingOperation(id: model.operationID)
+        model.requestCheck()
+        let oldID = model.operationID
+        let oldTask = Task { await model.executePendingOperation(id: oldID) }
+        await checker.waitUntilStarted()
+        model.deactivate()
+        model.activate()
+        let replacementID = model.operationID
+        await checker.finish()
+        await oldTask.value
+        #expect(model.operation == .load && model.operationID == replacementID)
+        #expect(!model.connectionVerified && model.feedback == nil)
+        await model.executePendingOperation(id: replacementID)
+        #expect(model.storedKeyState == .stored && !model.isBusy)
     }
 
     @Test

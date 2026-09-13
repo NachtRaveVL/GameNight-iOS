@@ -37,6 +37,9 @@ final class APIKeyViewModel {
     private(set) var feedback: Feedback?
     private(set) var connectionVerified = false
 
+    /// Identifies a request instance, including consecutive requests of the same kind.
+    var operationID: Int { generation }
+
     var isBusy: Bool { operation != nil }
     var canSave: Bool { !isBusy && !draftKey.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
     var canCheck: Bool { !isBusy && storedKeyState == .stored && draftKey.isEmpty }
@@ -92,9 +95,9 @@ final class APIKeyViewModel {
     }
 
     /// Run from the view's .task(id:); no unstructured task survives the screen lifecycle.
-    func executePendingOperation() async {
-        guard let operation else { return }
-        let ticket = generation
+    func executePendingOperation(id ticket: Int) async {
+        // A cancelled or outdated view task must not consume a newer pending request.
+        guard !Task.isCancelled, ticket == generation, let operation else { return }
         guard executingGeneration != ticket else { return }
         executingGeneration = ticket
         defer {

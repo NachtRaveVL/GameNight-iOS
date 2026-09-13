@@ -13,6 +13,7 @@ struct APIKeyView: View {
 
     var body: some View {
         @Bindable var model = viewModel
+        let operationID = viewModel.operationID
 
         Form {
             Section {
@@ -93,7 +94,7 @@ struct APIKeyView: View {
             Text("Your saved games and preferences will remain on this device.")
         }
         .onAppear { if scenePhase == .active { viewModel.activate() } }
-        .task(id: viewModel.operation) { await viewModel.executePendingOperation() }
+        .task(id: operationID) { await viewModel.executePendingOperation(id: operationID) }
         .onDisappear { viewModel.deactivate() }
         .onChange(of: scenePhase) { _, phase in
             if phase == .active {
